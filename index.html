@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Excel File</title>
+  </head>
+  <body>
+    <h1>Download Excel File Example</h1>
+    <button id="downloadBtn">Download Excel File</button>
+
+    <script>
+      document.getElementById("downloadBtn").addEventListener("click", () => {
+        const fileUrl = "http://localhost:3000/download-excel"; // Replace with your actual Excel file URL
+        const link = document.createElement("a");
+        link.href = fileUrl;
+        link.download = "sample.xlsx"; // Replace with your desired filename
+        link.click();
+      });
+    </script>
+  </body>
+</html>
