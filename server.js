@@ -6,7 +6,7 @@ const generateExcel = require("./generateExcel");
 const path = require("path");
 
 const app = express();
-const PORT = 3001; // Your backend port
+const PORT = process.env.PORT || 3001; // Your backend port
 
 // Enable CORS
 app.use(cors()); // Allows requests from any origin by default
